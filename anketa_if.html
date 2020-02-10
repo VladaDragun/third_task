@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    let fio = prompt('Укажите Вашу фамилию, имя и отчество (раздельно)', 'Иванов Иван Иванович');
+    let age = prompt('Укажите Ваш возраст', 20);
+    let gender = confirm('Вы мужчина?');
+
+    let days = age * 365;
+
+    let sex;
+    let old;
+
+    if (gender == true) {
+      sex = 'мужской';
+      if (age >= 63) {
+        old = 'да';
+      }
+      else {
+        old = 'нет';
+      }
+    }
+    else {
+      sex = 'женский';
+      if (age >= 58) {
+        old = 'да';
+      }
+      else {
+        old = 'нет';
+      }
+    }
+
+    alert (`
+      ФИО: ${fio}
+      возраст, лет: ${age}
+      возраст, дней: ${days}
+      пол: ${sex}
+      пенсионный возраст: ${old}
+    `);
+  </script>
+</body>
+</html>
